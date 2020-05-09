@@ -13,7 +13,15 @@
         "drupal/core": "self.version",
         "drupal/core-project-message": "self.version",
         "drupal/core-vendor-hardening": "self.version",
-        "wikimedia/composer-merge-plugin": "^1.4"
+        "wikimedia/composer-merge-plugin": "^1.4",
+        "drupal/components": "^1.1",
+        "drupal/paragraphs": "^1.11",
+        "drupal/entity_reference_revisions": "^1.8",
+        "drupal/devel": "^2.1",
+        "drupal/admin_toolbar": "^2.2",
+        "drupal/twig_field_value": "^2.0",
+        "drupal/crop": "^2.1",
+        "drupal/focal_point": "^1.4"
     },
     "require-dev": {
         "behat/mink": "1.7.x-dev",
