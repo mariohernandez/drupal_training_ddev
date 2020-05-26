@@ -9,10 +9,12 @@
       $('.from-our-blog__items', context).slick({
         autoplay: false,
         arrows: true,
-        speed: 600,
+        speed: 300,
         slidesToShow: 4,
+        slidesToScroll: 4,
         infinite: true,
         dots: true,
+        mobileFirst: true,
         responsive: [
           {
             breakpoint: 1024,
