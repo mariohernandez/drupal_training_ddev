@@ -38,8 +38,7 @@
 
 html {
   @include font-stack-primary;
-  font-size: 100%;
-  line-height: 1.15;
+  font-size: 62.5%;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
 }
@@ -47,6 +46,8 @@ html {
 // Sections.
 body {
   margin: 0;
+  font-size: 1.8rem;
+  line-height: 1.5;
 }
 
 // Render the `main` element consistently in IE11.
@@ -159,7 +160,7 @@ button:-moz-focusring,
 [type='button']:-moz-focusring,
 [type='reset']:-moz-focusring,
 [type='submit']:-moz-focusring {
-  outline: 1px dotted $color-danube;
+  outline: 1px dotted $color-info;
 }
 
 // Correct the padding in Firefox.

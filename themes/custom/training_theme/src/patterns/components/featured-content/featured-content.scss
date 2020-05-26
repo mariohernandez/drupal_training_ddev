@@ -1,0 +1,16 @@
+// Import site utilities
+@import '../../global/utils/init';
+
+.featured-content {
+  @include component-spacing;
+}
+
+.featured-content__items {
+  display: flex;
+  justify-content: space-around;
+}
+
+.featured-content__card {
+  flex: 0 0 22%;
+  max-width: 400px;
+}

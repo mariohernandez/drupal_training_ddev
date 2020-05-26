@@ -1,0 +1,11 @@
+{{ attach_library('training_theme/tags') }}
+
+<ul class="tags">
+  {% for item in items %}
+    <li class="tag__item">
+      <a href="{{ item.url }}" class="tag__link">
+        {{ item.title }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>

@@ -29,20 +29,40 @@ global:
 #     - training_theme/clearfix
 #     - training_theme/visually-hidden
 
+author:
+  css:
+    component:
+      dist/css/author.css: {}
+
 button:
   css:
     component:
       dist/css/button.css: {}
+
+card:
+  css:
+    component:
+      dist/css/card.css: {}
+  dependencies:
+    - training_theme/author
+    - training_theme/tags
 
 eyebrow:
   css:
     component:
       dist/css/eyebrow.css: {}
 
-heading:
+featured-content:
   css:
     component:
+      dist/css/featured-content.css:
+    component:
       dist/css/heading.css: {}
+
+webfonts:
+  css:
+    base:
+      'https://fonts.googleapis.com/css?family=Open+Sans:ital,wght@0,400;0,600;0,800;1,300;1,400&display=swap': { type: external, minified: true }
 
 hero:
   css:
@@ -54,12 +74,37 @@ message:
     component:
       dist/css/message.css: {}
 
+slick:
+  css:
+    component:
+      dist/css/slick.css: {}
+  js:
+    dist/js/slick.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+
 tabs:
   css:
     component:
       dist/css/tabs.css: {}
 
+tags:
+  css:
+    component:
+      dist/css/tags.css: {}
+
 media-item:
   css:
     component:
       dist/css/media-item.css: {}
+
+from-our-blog:
+  css:
+    component:
+      dist/css/from-our-blog.css: {}
+  js:
+    dist/js/from-our-blog.js: {}
+  dependencies:
+    - training_theme/slick

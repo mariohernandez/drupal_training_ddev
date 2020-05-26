@@ -1,36 +1,58 @@
-// Import site utilities.
+// Import site utilities
 @import '../../global/utils/init';
 
 .hero {
-  position: relative;
+  @include component-spacing;
+  @include image-crop (320px);
+
+  @media screen and (min-width: $bp-sm) {
+    height: 400px;
+  }
+
+  @media screen and (min-width: $bp-md) {
+    height: 600px;
+  }
+
+  @media screen and (min-width: $bp-xl) {
+    height: 700px;
+  }
+
+  // Styles heading when inside the hero.
+  .heading {
+    color: $color-navy-blue;
+    font-size: 6rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+
+    @media screen and (min-width: $bp-md) {
+      font-size: 8rem;
+      margin-bottom: 25px;
+    }
+
+    @media screen and (min-width: $bp-lg) {
+      font-size: 10rem;
+      margin-bottom: 25px;
+    }
+
+    @media screen and (min-width: $bp-xl) {
+      margin-bottom: 50px;
+      font-size: 12rem;
+    }
+  }
 }
 
 .hero__content {
-  background-color: $color-gray-lt;
-  padding: 16px;
+  @include center-align(absolute);
   text-align: center;
-
-  @include breakpoint($bp-sm) {
-    padding-bottom: 32px;
-    padding-top: 32px;
-  }
+  width: 100%;
 }
 
-.hero__heading {
-  margin-bottom: 8px;
+.hero__media {
 
-  @include breakpoint($bp-xsm) {
-    margin-bottom: 16px;
-  }
-}
-
-.hero__body {
-  font-size: 1rem;
-  line-height: 1.625;
-  margin-bottom: 8px;
-
-  @include breakpoint($bp-xsm) {
-    font-size: 1.5rem;
-    margin-bottom: 48px;
+  // Fixes drupal bug with position property when
+  // rendering image in drupal.
+  .contextual-region {
+    position: unset;
   }
 }

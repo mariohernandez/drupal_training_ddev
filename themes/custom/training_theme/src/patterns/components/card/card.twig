@@ -1,0 +1,66 @@
+{{ attach_library('training_theme/card') }}
+
+<article class="card{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {# Date for featured content cards. #}
+  {% if view_mode == 'featured' %}
+    <div class="card__featured--date">
+      {% block featured_date %}
+        {{ date }}
+      {% endblock %}
+    </div>
+  {% endif %}
+  {% if image %}
+    <div class="card__media">
+      {{ image }}
+    </div>
+  {% endif %}
+  <div class="card__content">
+    {% if title %}
+      {%
+        include '@training_theme/heading/heading.twig' with {
+          heading: title
+        } only
+      %}
+    {% endif %}
+    {% if not view_mode == 'featured' %}
+      <div class="eyebrow card__date">
+        {% block card_date %}
+          {{ date }}
+        {% endblock card_date %}
+      </div>
+    {% endif %}
+    {% block category %}
+      {% if category %}
+        <div class="eyebrow card__category">
+          {{ category }}
+        </div>
+      {% endif %}
+    {% endblock category %}
+    {% if body_text %}
+      <div class="card__body">
+        {{ body_text }}
+      </div>
+    {% endif %}
+    {% if tags %}
+      {% block tags %}
+        {%
+          include '@training_theme/tags/tags.twig' with {
+            "items": tags
+          } only
+        %}
+      {% endblock tags %}
+    {% endif %}
+    {% block author %}
+      {% if author and date %}
+        {%
+          include '@training_theme/author/author.twig' with {
+            author: author
+          } only
+        %}
+      {% endif %}
+    {% endblock author %}
+  </div>
+</article>

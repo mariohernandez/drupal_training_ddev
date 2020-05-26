@@ -25,6 +25,7 @@
         "drupal/focal_point": "1.4.0",
         "drupal/paragraphs": "1.11.0",
         "drupal/twig_field_value": "2.0.0",
+        "drupal/viewsreference": "1.4.0",
         "easyrdf/easyrdf": "0.9.1",
         "egulias/email-validator": "2.1.11",
         "guzzlehttp/guzzle": "6.3.3",

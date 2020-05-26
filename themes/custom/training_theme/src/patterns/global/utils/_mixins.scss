@@ -45,3 +45,51 @@
     #{$property}: $value;
   }
 }
+
+// Crop image in the middle and
+// set a fixed height.
+@mixin image-crop($height: 100%) {
+  height: $height;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    height: 100%;
+    left: 50%;
+    max-width: auto;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+  }
+}
+
+// vertical align mixin
+@mixin vertical-align($position: relative) {
+  display: block;
+  position: $position;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// horizontal align mixin
+@mixin horizontal-align($position: relative) {
+  display: inline-block;
+  left: 50%;
+  position: $position;
+  transform: translateX(-50%);
+}
+
+// center align mixin
+@mixin center-align($position: relative) {
+  display: block;
+  left: 50%;
+  position: $position;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Mixin for adding consistent spacing on components.
+@mixin component-spacing($margin: 100px) {
+	margin: 0 auto $margin;
+}

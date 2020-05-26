@@ -1,8 +1,15 @@
 {
-    "image": "<img src='https://source.unsplash.com/FIKD9t5_5zQ/1400x787' alt='test image' />",
-    "title": "Title Lorem Ipsum Dolor",
-    "heading_level": "h2",
-    "body": "Some sites need a tagline mauris ac dui sit amet sem facilisis finibus vitae et mi.",
-    "button_text": "Learn more",
-    "url": "#"
+  "image": "<img src='https://source.unsplash.com/DOoYFgTQWfs/1900x700' alt='Books on computer' />",
+  "heading": {
+    "heading_level": "1",
+    "modifier": "hero__title",
+    "title": "Leveling up",
+    "url": ""
+  },
+  "cta": {
+    "text": "Get started",
+    "url": "#",
+    "modifier": "hero__cta"
+  },
+  "modifier": ""
 }

@@ -1,0 +1,16 @@
+{
+  "image": "<img src='https://source.unsplash.com/BJrgqUKYx8M/360x450' alt='Women running' />",
+  "title": {
+    "heading_level": "2",
+    "modifier": "card__title",
+    "title": "Level up your game",
+    "url": "#"
+  },
+  "date": "Mar 16",
+  "category": "Sports",
+  "body_text": "Curabitur blandit tempus porttitor. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+  "tags": "",
+  "author": "<div class=\"author__photo\"><img src=\"https://source.unsplash.com/qzDF5PNEWKc/180x180\" alt=\"Author\"s headshot\" /></div><div class=\"author__name\"><span>Valentina Delgado</span><span>Digital Strategist</span></div>",
+  "view_mode": "featured",
+  "modifier": "card--wide"
+}

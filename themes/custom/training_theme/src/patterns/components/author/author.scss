@@ -1,0 +1,39 @@
+// Import site utilities
+@import '../../global/utils/init';
+
+.author {
+  align-items: center;
+  color: $color-gray-dark;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.3rem;
+  height: 70px;
+  justify-content: flex-end;
+}
+
+.author__photo {
+  height: 70px;
+  order: 2;
+  width: 70px;
+
+  img {
+    border-radius: 50%;
+  }
+}
+
+.author__name {
+  margin-right: 10px;
+  order: 1;
+  text-align: right;
+  text-transform: uppercase;
+
+  span {
+    display: block;
+
+    ~ span {
+      font-weight: normal;
+      font-style: italic;
+      text-transform: none;
+    }
+  }
+}

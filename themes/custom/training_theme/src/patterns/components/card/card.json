@@ -1,0 +1,27 @@
+{
+  "image": "<img src='https://source.unsplash.com/BJrgqUKYx8M/640x360' alt='Women running' />",
+  "title": {
+    "heading_level": "2",
+    "modifier": "card__title",
+    "title": "Level up your game",
+    "url": "#"
+  },
+  "date": "March 16 2020",
+  "body_text": "Curabitur blandit tempus porttitor. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+  "tags": [
+    {
+      "title": "Photography",
+      "url": "#"
+    },
+    {
+      "title": "Sports",
+      "url": "#"
+    },
+    {
+      "title": "Outdors",
+      "url": "#"
+    }
+  ],
+  "view_mode": "",
+  "modifier": ""
+}

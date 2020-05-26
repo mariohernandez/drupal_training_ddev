@@ -25,3 +25,19 @@ function training_theme_preprocess_page(array &$variables) {
 function training_theme_preprocess_form(array &$variables) {
 
 }
+
+/**
+ * Implements hook_theme_suggestions_container_alter().
+ */
+function training_theme_theme_suggestions_container_alter(&$suggestions, array $variables) {
+  $element = $variables['element'];
+
+  if (isset($element['#type']) && $element['#type'] == 'view') {
+    $suggestions[] = 'container__' . $element['#name'];
+    $suggestions[] = 'container__' . $element['#name'] . '__' . $element['#display_id'];
+  }
+
+  if (isset($element['#type']) && $element['#type'] == 'container' && isset($element['children']['#type'])) {
+    $suggestions[] = 'container__' . $element['children']['#type'];
+  }
+}

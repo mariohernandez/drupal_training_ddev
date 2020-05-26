@@ -1,0 +1,29 @@
+{{ attach_library('training_theme/featured-content') }}
+
+<section class="featured-content{{ modifier ? ' ' ~ modifier }}{{- attributes ? attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
+  {% if heading %}
+    {%
+      include '@training_theme/heading/heading.twig' with {
+        "heading": heading
+      } only
+    %}
+  {% endif %}
+
+  <div class="featured-content__items">
+    {% block featured_items %}
+      {% for item in items %}
+        {%
+          include '@training_theme/card/card.twig' with {
+            "image": item.image,
+            "title": item.title,
+            "date": item.date,
+            "body_text": item.body_text,
+            "author": item.author,
+            "modifier": item.modifier
+          } only
+        %}
+      {% endfor %}
+    {% endblock featured_items %}
+  </div>
+</section>
