@@ -10,7 +10,11 @@
   "category": "Sports",
   "body_text": "Curabitur blandit tempus porttitor. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
   "tags": "",
-  "author": "<div class=\"author__photo\"><img src=\"https://source.unsplash.com/qzDF5PNEWKc/180x180\" alt=\"Author\"s headshot\" /></div><div class=\"author__name\"><span>Valentina Delgado</span><span>Digital Strategist</span></div>",
+  "author": {
+    "photo": "<img src='https://source.unsplash.com/_cvwXhGqG-o/100x100' alt='Author's headshot' />",
+    "name": "Valentina De Leon",
+    "title": "Digital Strategist"
+  },
   "view_mode": "featured",
   "modifier": "card--wide"
 }

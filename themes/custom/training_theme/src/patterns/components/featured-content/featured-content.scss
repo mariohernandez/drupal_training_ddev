@@ -3,6 +3,7 @@
 
 .featured-content {
   @include component-spacing;
+  background-color: $color-gray-light;
 }
 
 .featured-content__items {

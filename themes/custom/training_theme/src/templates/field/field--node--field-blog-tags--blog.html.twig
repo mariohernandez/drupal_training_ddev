@@ -33,16 +33,13 @@
  * @see template_preprocess_field()
  */
 #}
-{{ attach_library('training_theme/tags') }}
 
-<ul{{ attributes.addClass('tags')}}>
-  {% for item in items %}
-    <li{{ item.attributes.addClass('tag__item') }}>
-      {% embed '@training_theme/tags/_tag-item.twig' %}
-        {% block tag_link %}
-          {{ item.content }}
-        {% endblock %}
-      {% endembed %}
-    </li>
-  {% endfor %}
-</ul>
+{#
+Letting the tags component do all the work.
+Each item.content will insert a new _tag-item.twig.
+#}
+{% embed '@training_theme/tags/tags.twig' %}
+  {% block tag_item %}
+    {{ item.content }}
+  {% endblock %}
+{% endembed %}

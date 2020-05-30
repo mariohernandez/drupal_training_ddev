@@ -1,14 +1,14 @@
 {{ attach_library('training_theme/featured-content') }}
 
-<section class="featured-content{{ modifier ? ' ' ~ modifier }}{{- attributes ? attributes.class -}}"
+<section class="featured-content{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
   {{- attributes ? attributes|without(class) -}}>
-  {% if heading %}
-    {%
-      include '@training_theme/heading/heading.twig' with {
-        "heading": heading
-      } only
-    %}
-  {% endif %}
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {%
+    include '@training_theme/heading/heading.twig' with {
+      "heading": heading
+    } only
+  %}
 
   <div class="featured-content__items">
     {% block featured_items %}

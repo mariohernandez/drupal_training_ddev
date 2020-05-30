@@ -5,13 +5,14 @@
   {{ title_prefix }}
   {{ title_suffix }}
   {# Date for featured content cards. #}
-  {% if view_mode == 'featured' %}
-    <div class="card__featured--date">
-      {% block featured_date %}
+  {% block featured_date %}
+    {% if view_mode == 'featured' %}
+      <div class="card__featured--date">
         {{ date }}
-      {% endblock %}
-    </div>
-  {% endif %}
+      </div>
+    {% endif %}
+  {% endblock featured_date %}
+
   {% if image %}
     <div class="card__media">
       {{ image }}
@@ -25,42 +26,45 @@
         } only
       %}
     {% endif %}
-    {% if not view_mode == 'featured' %}
-      <div class="eyebrow card__date">
-        {% block card_date %}
+
+    {% block card_date %}
+      {% if not view_mode == 'featured' %}
+        <div class="eyebrow card__date">
           {{ date }}
-        {% endblock card_date %}
-      </div>
-    {% endif %}
-    {% block category %}
-      {% if category %}
-        <div class="eyebrow card__category">
-          {{ category }}
         </div>
       {% endif %}
-    {% endblock category %}
+    {% endblock card_date %}
+
+    {% if category %}
+      <div class="eyebrow card__category">
+        {{ category }}
+      </div>
+    {% endif %}
+
     {% if body_text %}
       <div class="card__body">
         {{ body_text }}
       </div>
     {% endif %}
-    {% if tags %}
-      {% block tags %}
+
+    {% block tags %}
+      {% if tags %}
         {%
           include '@training_theme/tags/tags.twig' with {
             "items": tags
           } only
         %}
-      {% endblock tags %}
-    {% endif %}
-    {% block author %}
-      {% if author and date %}
-        {%
-          include '@training_theme/author/author.twig' with {
-            author: author
-          } only
-        %}
       {% endif %}
-    {% endblock author %}
+    {% endblock tags %}
+
+    {% if author %}
+      {%
+        include '@training_theme/author/author.twig' with {
+          "photo": author.photo,
+          "name": author.name,
+          "title": author.title
+        } only
+      %}
+    {% endif %}
   </div>
 </article>

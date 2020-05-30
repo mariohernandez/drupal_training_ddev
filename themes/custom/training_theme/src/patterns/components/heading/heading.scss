@@ -15,24 +15,24 @@
       margin-bottom: 40px;
     }
   }
+
+  // Styles for extra large headings.
+  &.heading--large {
+    color: $color-gray;
+    font-size: 3rem;
+    text-align: center;
+
+    @media screen and (min-width: $bp-sm) {
+      font-size: 4rem;
+    }
+
+    @media screen and (min-width: $bp-md) {
+      font-size: 6rem;
+    }
+  }
 }
 
 // Removes underline when headings are links.
 .heading a {
   text-decoration: none;
-}
-
-// Styles for extra large headings.
-.heading.heading--large {
-  color: $color-gray;
-  font-size: 3rem;
-  text-align: center;
-
-  @media screen and (min-width: $bp-sm) {
-    font-size: 4rem;
-  }
-
-  @media screen and (min-width: $bp-md) {
-    font-size: 6rem;
-  }
 }

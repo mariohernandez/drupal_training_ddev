@@ -55,7 +55,15 @@ eyebrow:
 featured-content:
   css:
     component:
-      dist/css/featured-content.css:
+      dist/css/featured-content.css: {}
+
+from-our-blog:
+  css:
+    component:
+      dist/css/from-our-blog.css: {}
+
+heading:
+  css:
     component:
       dist/css/heading.css: {}
 
@@ -82,6 +90,7 @@ slick:
     dist/js/slick.js: {}
   dependencies:
     - core/jquery
+    - core/jquery.once
     - core/drupal
     - core/drupalSettings
 
@@ -99,12 +108,3 @@ media-item:
   css:
     component:
       dist/css/media-item.css: {}
-
-from-our-blog:
-  css:
-    component:
-      dist/css/from-our-blog.css: {}
-  js:
-    dist/js/from-our-blog.js: {}
-  dependencies:
-    - training_theme/slick

@@ -10,15 +10,15 @@
   "body_text": "Curabitur blandit tempus porttitor. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
   "tags": [
     {
-      "title": "Photography",
+      "name": "Photography",
       "url": "#"
     },
     {
-      "title": "Sports",
+      "name": "Sports",
       "url": "#"
     },
     {
-      "title": "Outdors",
+      "name": "Outdors",
       "url": "#"
     }
   ],

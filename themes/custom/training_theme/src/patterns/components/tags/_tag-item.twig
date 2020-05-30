@@ -1,5 +1,8 @@
-{% block tag_link %}
+<li class="tag__item{{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
+  {{ title_prefix }}
   <a href="{{ url }}" class="tag__link">
     {{ name }}
   </a>
-{% endblock %}
+  {{ title_suffix }}
+</li>

@@ -23,10 +23,11 @@
  * @see template_preprocess_taxonomy_term()
  */
 #}
-
-{#
-This template provides url and name by default,
-no need to map fields since the _tag-item.twig
-template is expecting the same fields/variables.
-#}
-{% include '@training_theme/tags/_tag-item.twig' %}
+<div{{ attributes }}>
+  {{ title_prefix }}
+  {% if name and not page %}
+    <h2><a href="{{ url }}">{{ name }}</a></h2>
+  {% endif %}
+  {{ title_suffix }}
+  {{ content }}
+</div>

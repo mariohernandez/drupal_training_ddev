@@ -23,15 +23,15 @@
       "body_text": "Curabitur blandit tempus porttitor. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
       "tags": [
         {
-          "title": "Phtography",
+          "name": "Phtography",
           "url": "#"
         },
         {
-          "title": "Nature",
+          "name": "Nature",
           "url": "#"
         },
         {
-          "title": "Outdors",
+          "name": "Outdors",
           "url": "#"
         }
       ],
@@ -49,15 +49,15 @@
       "body_text": "Curabitur blandit tempus porttitor. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
       "tags": [
         {
-          "title": "Phtography",
+          "name": "Phtography",
           "url": "#"
         },
         {
-          "title": "Nature",
+          "name": "Nature",
           "url": "#"
         },
         {
-          "title": "Outdors",
+          "name": "Outdors",
           "url": "#"
         }
       ],
@@ -75,15 +75,15 @@
       "body_text": "Curabitur blandit tempus porttitor. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
       "tags": [
         {
-          "title": "Phtography",
+          "name": "Phtography",
           "url": "#"
         },
         {
-          "title": "Nature",
+          "name": "Nature",
           "url": "#"
         },
         {
-          "title": "Outdors",
+          "name": "Outdors",
           "url": "#"
         }
       ],
@@ -101,15 +101,15 @@
       "body_text": "Curabitur blandit tempus porttitor. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
       "tags": [
         {
-          "title": "Phtography",
+          "name": "Phtography",
           "url": "#"
         },
         {
-          "title": "Nature",
+          "name": "Nature",
           "url": "#"
         },
         {
-          "title": "Outdors",
+          "name": "Outdors",
           "url": "#"
         }
       ],

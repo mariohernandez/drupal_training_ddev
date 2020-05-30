@@ -13,8 +13,8 @@
   <div class="from-our-blog__items">
     {% block blog_items %}
       {% for item in items %}
-        {%
-          include '@training_theme/card/card.twig' with {
+        {% embed '@training_theme/card/card.twig' with
+          {
             "image": item.image,
             "title": item.title,
             "date": item.date,
@@ -23,6 +23,9 @@
             "modifier": ""
           } only
         %}
+          {% block featured_date %}
+          {% endblock %}
+        {% endembed %}
       {% endfor %}
     {% endblock blog_items %}
   </div>
