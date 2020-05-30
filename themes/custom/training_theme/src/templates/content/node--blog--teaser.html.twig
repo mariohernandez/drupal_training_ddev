@@ -116,11 +116,14 @@ and make use of twig blocks found in such component.
   {% block featured_date %}
   {% endblock featured_date %}
 
-  {# Calls card_date twig block.#}
+  {# Calls card_date twig block. #}
   {% block card_date %}
-    {{ date }}
+    <div class="eyebrow card__date">
+      {{ date }}
+    </div>
   {% endblock card_date %}
 
+  {# Outputs tags. #}
   {% block tags %}
     {{ tags }}
   {% endblock tags %}

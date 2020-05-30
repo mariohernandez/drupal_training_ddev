@@ -37,6 +37,8 @@
   ]
 %}
 
+{% set attributes = attributes.addClass(classes) %}
+
 {# Variable for cta #}
 {% set cta = {
     modifier: '',
@@ -53,8 +55,6 @@
     "url": ''
   }
 %}
-
-{% set attributes = attributes.addClass(classes) %}
 
 {% embed '@training_theme/from-our-blog/from-our-blog.twig' %}
   {% block blog_items %}

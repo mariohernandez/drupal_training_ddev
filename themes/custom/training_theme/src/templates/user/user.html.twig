@@ -16,6 +16,8 @@
  * @see template_preprocess_user()
  */
 #}
-{% if content %}
-  {{- content -}}
-{% endif %}
+<article{{ attributes }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</article>

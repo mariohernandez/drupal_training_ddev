@@ -50,6 +50,15 @@ body {
   line-height: 1.5;
 }
 
+a {
+  color: $color-navy-blue;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
 // Render the `main` element consistently in IE11.
 main {
   display: block;

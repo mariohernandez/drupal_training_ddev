@@ -36,6 +36,8 @@
   ]
 %}
 
+{% set attributes = attributes.addClass(classes) %}
+
 {# Variable for the view title #}
 {% set heading = {
     "heading_level": '2',
@@ -44,8 +46,6 @@
     "url": ''
   }
 %}
-
-{% set attributes = attributes.addClass(classes) %}
 
 {% embed '@training_theme/featured-content/featured-content.twig' %}
   {% block featured_items %}

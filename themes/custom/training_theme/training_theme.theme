@@ -27,32 +27,14 @@ function training_theme_preprocess_form(array &$variables) {
 }
 
 /**
- * Implements hook_theme_suggestions_container_alter().
- */
-function training_theme_theme_suggestions_container_alter(&$suggestions, array $variables) {
-  $element = $variables['element'];
-
-  if (isset($element['#type']) && $element['#type'] == 'view') {
-    $suggestions[] = 'container__' . $element['#name'];
-    $suggestions[] = 'container__' . $element['#name'] . '__' . $element['#display_id'];
-  }
-
-  if (isset($element['#type']) && $element['#type'] == 'container' && isset($element['children']['#type'])) {
-    $suggestions[] = 'container__' . $element['children']['#type'];
-  }
-}
-
-/**
  * Implements hook_theme_suggestions_user_alter().
  *
  *   An array of alternate, more specific names for template files or theme
- *   functions.
+ *   functions for users.
  */
 function training_theme_theme_suggestions_user_alter(&$suggestions, $vars, $hook) {
-
   // Define the view mode.
   $mode = $vars['elements']['#view_mode'];
-
   // Create a theme hook suggestion which has the view mode name in it.
   $suggestions[] = 'user__' . $mode;
 }

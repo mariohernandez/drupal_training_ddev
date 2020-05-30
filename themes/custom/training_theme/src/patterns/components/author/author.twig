@@ -4,8 +4,8 @@
   {{- attributes ? ' ' ~ attributes.class -}}"
   {{- attributes ? attributes|without(class) -}}>
   <div class="author__meta">
-    <div class="author__name">{{ name }}</div>
-    <div class="author__title">{{ title }}</div>
+    <div class="author__name">{{ author.name }}</div>
+    <div class="author__title">{{ author.title }}</div>
   </div>
-  <div class="author__photo">{{ photo }}</div>
+  <div class="author__photo">{{ author.photo }}</div>
 </div>

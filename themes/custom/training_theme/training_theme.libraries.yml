@@ -46,6 +46,7 @@ card:
   dependencies:
     - training_theme/author
     - training_theme/tags
+    - training_theme/eyebrow
 
 eyebrow:
   css:
