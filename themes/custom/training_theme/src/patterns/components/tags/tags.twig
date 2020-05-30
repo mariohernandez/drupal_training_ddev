@@ -1,11 +1,16 @@
 {{ attach_library('training_theme/tags') }}
 
-<ul class="tags">
+<ul class="tags"{{ attributes }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
   {% for item in items %}
     <li class="tag__item">
-      <a href="{{ item.url }}" class="tag__link">
-        {{ item.title }}
-      </a>
+      {%
+        include '@training_theme/tags/_tag-item.twig' with {
+          "name": item.name,
+          "url": item.url
+        } only
+      %}
     </li>
   {% endfor %}
 </ul>

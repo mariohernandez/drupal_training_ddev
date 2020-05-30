@@ -1,15 +1,15 @@
 {
   "items": [
     {
-      "title": "Frashion",
+      "name": "Frashion",
       "url": "#"
     },
     {
-      "title": "Sports",
+      "name": "Sports",
       "url": "#"
     },
     {
-      "title": "Health",
+      "name": "Health",
       "url": "#"
     }
   ]

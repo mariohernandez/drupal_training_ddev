@@ -70,10 +70,18 @@
  *   in different view modes.
  */
 #}
-{% set date = node.createdtime|format_date('short') %}
 
+{# Sets date variable to change to short format. #}
+{% set date = node.createdtime|format_date('long') %}
+
+{# Sets variable to trigger content render array. #}
 {% set rendered_content = content|render %}
 
+{#
+Sets variable for article title to provide all
+properties needed by the heading component (heading_level,
+modifier, title, and url).
+#}
 {% set article_title = {
     "heading_level": 3,
     "modifier": "card__title",
@@ -82,26 +90,39 @@
   }
 %}
 
+{#
+Uses embed to be able to include card component
+and make use of twig blocks found in such component.
+#}
 {% embed '@training_theme/card/card.twig' with
   {
     "attributes": attributes,
     "title_prefix": title_prefix,
     "title_suffix": title_suffix,
-    "image": content.field_blog_image|render|trim is not empty ? content.field_blog_image,
     "title": article_title,
+    "image": content.field_blog_image|render|trim is not empty ? content.field_blog_image,
     "date": date,
-    "category": content.field_category|render|trim is not empty ? content.field_category,
     "body_text": content.body|render|trim is not empty ? content.body,
-    "author": content.field_author|render|trim is not empty ? content.field_author,
-    "modifier": 'card--wide'
+    "tags": content.field_blog_tags|render|trim is not empty ? content.field_blog_tags,
+    "modifier": ""
   } only
 %}
 
+  {#
+  Removes content from featured_date twig block
+  to avoid printing the date twice and in
+  different places.
+  #}
   {% block featured_date %}
-    {{ date }}
   {% endblock featured_date %}
 
-  {% block author %}
-    {{ author }}
-  {% endblock author %}
+  {# Calls card_date twig block.#}
+  {% block card_date %}
+    {{ date }}
+  {% endblock card_date %}
+
+  {# Calls tags twig block.#}
+  {% block tags %}
+    {{ tags }}
+  {% endblock tags %}
 {% endembed %}

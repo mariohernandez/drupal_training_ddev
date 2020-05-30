@@ -1,14 +1,14 @@
 {{ attach_library('training_theme/from-our-blog') }}
 
-<section class="from-our-blog{{ modifier ? ' ' ~ modifier }}{{- attributes ? attributes.class -}}"
+<section class="from-our-blog{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
   {{- attributes ? attributes|without(class) -}}>
-  {% if heading %}
-    {%
-      include '@training_theme/heading/heading.twig' with {
-        "heading": heading
-      } only
-    %}
-  {% endif %}
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {%
+    include '@training_theme/heading/heading.twig' with {
+      "heading": heading
+    } only
+  %}
 
   <div class="from-our-blog__items">
     {% block blog_items %}

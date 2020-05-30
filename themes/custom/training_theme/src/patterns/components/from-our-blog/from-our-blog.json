@@ -15,7 +15,7 @@
       "image": "<img src='https://source.unsplash.com/qQGAQMbURhU/640x360' alt='Man doing yoga' />",
       "title": {
         "heading_level": "3",
-        "modifier": "",
+        "modifier": "card__title",
         "title": "The beauty of nature",
         "url": "#"
       },
@@ -41,7 +41,7 @@
       "image": "<img src='https://source.unsplash.com/HONJP8DyiSM/640x360' alt='Tech gadgets' />",
       "title": {
         "heading_level": "3",
-        "modifier": "",
+        "modifier": "card__title",
         "title": "The beauty of nature",
         "url": "#"
       },
@@ -67,7 +67,7 @@
       "image": "<img src='https://source.unsplash.com/4b9Talfia6c/640x360' alt='Candy in shape of heart' />",
       "title": {
         "heading_level": "3",
-        "modifier": "",
+        "modifier": "card__title",
         "title": "The beauty of nature",
         "url": "#"
       },
@@ -93,7 +93,7 @@
       "image": "<img src='https://source.unsplash.com/hn6CC9aosEk/640x360' alt='Painting of a tiger' />",
       "title": {
         "heading_level": "3",
-        "modifier": "",
+        "modifier": "card__title",
         "title": "The beauty of nature",
         "url": "#"
       },
