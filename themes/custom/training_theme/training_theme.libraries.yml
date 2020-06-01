@@ -78,6 +78,11 @@ hero:
     component:
       dist/css/hero.css: {}
 
+main-menu:
+  css:
+    component:
+      dist/css/main-menu.css: {}
+
 message:
   css:
     component:

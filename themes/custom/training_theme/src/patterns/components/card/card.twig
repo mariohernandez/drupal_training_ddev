@@ -3,8 +3,6 @@
 <article class="card{{ modifier ? ' ' ~ modifier }}
   {{- attributes ? ' ' ~ attributes.class -}}"
   {{- attributes ? attributes|without(class) -}}>
-  {{ title_prefix }}
-  {{ title_suffix }}
   {# Date for featured content cards. #}
   {% if 'card--wide' in modifier %}
     {% block featured_date %}
@@ -20,6 +18,7 @@
     </div>
   {% endif %}
   <div class="card__content">
+  {{ title_prefix }}
     {% if title %}
       {%
         include '@training_theme/heading/heading.twig' with {
@@ -27,6 +26,7 @@
         } only
       %}
     {% endif %}
+  {{ title_suffix }}
 
     {% if 'card--wide' not in modifier %}
       {% block card_date %}

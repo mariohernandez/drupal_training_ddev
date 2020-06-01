@@ -1,0 +1,37 @@
+items:
+  - title: 'Home'
+    url: '#'
+    menu_level: 0
+  - title: 'About Us'
+    url: '#'
+    menu_level: 0
+    below:
+      - title: 'Our Team'
+        url: '#'
+        menu_level: 1
+      - title: 'Our Clients'
+        url: '#'
+        menu_level: 1
+  - title: 'Blog'
+    url: '#'
+    menu_level: 0
+  - title: 'Our Work'
+    url: '#'
+    menu_level: 0
+    below:
+      - title: 'Design'
+        url: '#'
+        menu_level: 1
+      - title: 'Development'
+        url: '#'
+        menu_level: 1
+      - title: 'Digital Strategy'
+        url: '#'
+        menu_level: 1
+        below:
+          - title: 'Third Level link'
+            url: '#'
+            menu_level: 2
+          - title: 'Another third level link'
+            url: '#'
+            menu_level: 2

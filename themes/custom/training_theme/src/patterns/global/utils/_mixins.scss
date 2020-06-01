@@ -1,5 +1,38 @@
 // Mixins.
 
+// Headings mixins
+@mixin heading1 {
+  font-size: 3rem;
+
+  @include breakpoint($bp-md) {
+    font-size: 3.6rem;
+  }
+}
+
+@mixin heading2 {
+  font-size: 2.4rem;
+
+  @include breakpoint($bp-md) {
+    font-size: 3rem;
+  }
+}
+
+@mixin heading3 {
+  font-size: 2.1rem;
+
+  @include breakpoint($bp-md) {
+    font-size: 2.4rem;
+  }
+}
+
+@mixin heading4 {
+  font-size: 1.6rem;
+
+  @include breakpoint($bp-md) {
+    font-size: 2rem;
+  }
+}
+
 // Clearfix
 @mixin clearfix {
   &::after {
@@ -92,4 +125,5 @@
 // Mixin for adding consistent spacing on components.
 @mixin component-spacing($margin: 100px) {
 	margin: 0 auto $margin;
+  max-width: $bp-max;
 }

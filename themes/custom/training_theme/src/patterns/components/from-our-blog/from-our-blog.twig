@@ -20,11 +20,12 @@
             "date": item.date,
             "body_text": item.body_text,
             "tags": item.tags,
-            "modifier": ""
+            "modifier": item.modifier
           } only
         %}
           {% block featured_date %}
-          {% endblock %}
+          {# Purposely leaving empty. #}
+          {% endblock featured_date %}
         {% endembed %}
       {% endfor %}
     {% endblock blog_items %}

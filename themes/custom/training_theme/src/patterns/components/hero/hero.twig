@@ -1,14 +1,13 @@
 {{ attach_library('training_theme/hero') }}
 
-<section class="hero{{ modifier ? ' ' ~ modifier }}{{- attributes ? attributes.class -}}"
-
+<section class="hero{{ modifier ? ' ' ~ modifier }}
+  {{- attributes ? attributes.class -}}"
   {{- attributes ? attributes|without(class) -}}>
   {% if image %}
     <div class="hero__media">
       {{ image }}
     </div>
   {% endif %}
-
   <div class="hero__content">
     {% if heading %}
       {%
