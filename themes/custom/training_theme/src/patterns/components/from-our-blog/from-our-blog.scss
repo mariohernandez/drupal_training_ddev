@@ -24,20 +24,21 @@
     justify-content: space-between;
     flex-wrap: wrap;
   }
+
+  .card {
+    margin-bottom: 60px;
+
+    @media screen and (min-width: $bp-sm) {
+      flex: 0 0 45%;
+    }
+
+    @media screen and (min-width: $bp-lg) {
+      flex: 0 0 22%;
+      margin-bottom: 0;
+    }
+  }
 }
 
-.from-our-blog__card {
-  margin-bottom: 60px;
-
-  @media screen and (min-width: $bp-sm) {
-    flex: 0 0 45%;
-  }
-
-  @media screen and (min-width: $bp-lg) {
-    flex: 0 0 22%;
-    margin-bottom: 0;
-  }
-}
 
 .from-our-blog__cta {
   margin: 50px auto 0;

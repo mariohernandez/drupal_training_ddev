@@ -57,6 +57,11 @@
       z-index: $zi-lowest;
     }
 
+    .author {
+      justify-content: flex-end;
+      margin-top: auto;
+    }
+
     // Changes card layout on larger screens.
     @media screen and (min-width: $bp-sm) {
       flex-direction: row;
@@ -70,11 +75,6 @@
           flex-direction: column;
           flex-grow: 1;
         }
-      }
-
-      .author {
-        margin-top: auto;
-        margin-left: auto;
       }
 
       img {
