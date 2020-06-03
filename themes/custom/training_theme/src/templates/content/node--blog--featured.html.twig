@@ -109,6 +109,11 @@ and make use of twig blocks found in such component.
   } only
 %}
 
+  {# Calls featured_date twig block.#}
+  {% block featured_date %}
+    {{ date }}
+  {% endblock featured_date %}
+
   {#
   Removes content from card_date twig block
   to avoid printing the date twice and in

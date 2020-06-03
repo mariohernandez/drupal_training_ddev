@@ -39,12 +39,12 @@
 html {
   @include font-stack-primary;
   font-size: 62.5%;
-  box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
 }
 
 // Sections.
 body {
+  box-sizing: border-box;
   margin: 0;
   font-size: 1.8rem;
   line-height: 1.5;

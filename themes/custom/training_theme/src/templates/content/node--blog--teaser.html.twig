@@ -70,7 +70,6 @@
  *   in different view modes.
  */
 #}
-
 {# Sets date variable to change to short format. #}
 {% set date = node.createdtime|format_date('long') %}
 
@@ -118,9 +117,7 @@ and make use of twig blocks found in such component.
 
   {# Calls card_date twig block. #}
   {% block card_date %}
-    <div class="eyebrow card__date">
-      {{ date }}
-    </div>
+    {{ date }}
   {% endblock card_date %}
 
   {# Outputs tags. #}

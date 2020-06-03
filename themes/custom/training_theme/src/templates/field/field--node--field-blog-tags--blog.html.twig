@@ -33,11 +33,6 @@
  * @see template_preprocess_field()
  */
 #}
-
-{#
-Letting the tags component do all the work.
-Each item.content will insert a new _tag-item.twig.
-#}
 {% embed '@training_theme/tags/tags.twig' %}
   {% block tag_item %}
     {{ item.content }}
