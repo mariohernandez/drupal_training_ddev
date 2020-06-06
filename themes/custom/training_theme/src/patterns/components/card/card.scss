@@ -73,11 +73,6 @@
         }
       }
 
-      .author {
-        margin-top: auto;
-        margin-left: auto;
-      }
-
       img {
         max-width: 100%;
       }
@@ -97,6 +92,11 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     padding-bottom: 8px;
+  }
+
+  .author {
+    margin-top: auto;
+    justify-content: flex-end;
   }
 }
 

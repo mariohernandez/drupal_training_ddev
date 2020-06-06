@@ -1,6 +1,6 @@
 {{ attach_library('training_theme/featured-content') }}
 
-<section class="featured-content{{ modifier ? ' ' ~ modifier }}{{- attributes ? attributes.class -}}"
+<section class="featured-content{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
   {{- attributes ? attributes|without(class) -}}>
   {% if heading %}
     {%
@@ -16,8 +16,9 @@
         {%
           include '@training_theme/card/card.twig' with {
             "image": item.image,
-            "title": item.title,
+            "heading": item.heading,
             "date": item.date,
+            "category": item.category,
             "body_text": item.body_text,
             "author": item.author,
             "modifier": item.modifier

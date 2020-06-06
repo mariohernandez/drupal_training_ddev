@@ -7,8 +7,8 @@
   },
   "items": [
     {
-      "image": "<img src='https://source.unsplash.com/EwKXn5CapA4/400x520' alt='Man doing yoga' />",
-      "title": {
+      "image": "<img src='https://source.unsplash.com/EwKXn5CapA4/400x520' alt='alt text here' />",
+      "heading": {
         "heading_level": "3",
         "modifier": "card__title",
         "title": "The beauty of nature",
@@ -26,7 +26,7 @@
     },
     {
       "image": "<img src='https://source.unsplash.com//a8lTjWJJgLA/400x520' alt='Tech gadgets' />",
-      "title": {
+      "heading": {
         "heading_level": "3",
         "modifier": "card__title",
         "title": "The beauty of nature",

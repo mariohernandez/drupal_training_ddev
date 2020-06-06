@@ -6,11 +6,11 @@
 
   {# Date for featured content cards. #}
   {% if 'card--wide' in modifier %}
-    {% block featured_date %}
-      <div class="card__featured--date">
+    <div class="card__featured--date">
+      {% block featured_date %}
         {{ date }}
-      </div>
-    {% endblock featured_date %}
+      {% endblock featured_date %}
+    </div>
   {% endif %}
 
   {% if image %}
@@ -18,12 +18,13 @@
       {{ image }}
     </div>
   {% endif %}
+
   <div class="card__content">
-    {% if title %}
+    {% if heading %}
       {{ title_prefix }}
       {%
         include '@training_theme/heading/heading.twig' with {
-          heading: title
+          heading: heading
         } only
       %}
       {{ title_suffix }}
@@ -31,11 +32,11 @@
 
     {# Date for featured content cards. #}
     {% if 'card--wide' not in modifier %}
-      {% block card_date %}
-          <div class="eyebrow card__date">
-            {{ date }}
-          </div>
-      {% endblock card_date %}
+      <div class="eyebrow card__date">
+        {% block card_date %}
+          {{ date }}
+        {% endblock card_date %}
+      </div>
     {% endif %}
 
     {% if category %}
@@ -52,15 +53,11 @@
 
     {% block tags %}
       {% if tags %}
-        <ul class="tags">
-          {% for item in tags %}
-            <li class="tag__item">
-              <a href="{{ item.url }}" class="tag__link">
-                {{ item.name }}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
+        {%
+          include '@training_theme/tags/tags.twig' with {
+            "items": tags
+          } only
+        %}
       {% endif %}
     {% endblock tags %}
 
