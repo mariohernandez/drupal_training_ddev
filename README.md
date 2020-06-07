@@ -1,17 +1,31 @@
 # Drupal 8 training
 
-In this hands-on training workshop you will learn the process of planning, identifying, building, and integrating components with Drupal 8 using Pattern Lab and Twig. Drupal 8 best practices will be at the core of the training to ensure components are built in a way that leverage caching, performance and re-usability.
+## Requirements
+* **Docker**:  Install Docker on [macOS](https://ddev.readthedocs.io/en/stable/users/docker_installation/) or [Windows 10](https://ddev.readthedocs.io/en/stable/users/docker_installation/#windows-installation-docker-desktop-for-windows)
+* **DDev**: Install DDev on [macOS](https://ddev.readthedocs.io/en/stable/#homebrewlinuxbrew-macoslinux) or [Windows 10](https://ddev.readthedocs.io/en/stable/#installation-or-upgrade-windows)
 
-## This training covers the following topics:
-* Principles of Atomic Design for building flexible and scalable components
-* Building a custom Drupal 8 theme using Mediacurrent's Theme Generator
-* Using Pattern Lab and Twig to build flexible and re-usable components
-* Twig's `include`, `extends`, `embed`, and Twig Blocks to nest and reuse components
-* Paragraphs module to build Drupal's architecture for components.
-* Theme debugging with Kint
-* Working with and creating Twig template suggestions
-* Working with Drupal's content arrays to get field's values in a best-practices manner
-* Integrating components with Drupal 8 using Node templates, paragraphs templates, views templates and more.
-* Leveraging Drupal's view modes to enhace components integrations with Drupal
-* Creating components variants to leverage previously-built components and avoid duplicate code.
-* Planning, building and using Image Styles and Responsive Image Styles
+## Setup your environment
+After installing Docker and DDev, run the following command:
+```
+ddev start
+```
+
+### What's included
+This project includes the following:
+* Latest Drupal 8
+* Drupal 8 theme, `training_theme`
+  * Pattern Lab
+  * Gulp
+* NodeJS, NPM
+* Twig debugging enabled
+* Contrib modules:
+  * Components
+  * Paragraphs
+  * Devel
+  * Admin toolbar
+  * Twig field value
+  * Views reference field
+* Core modules
+  * Media
+  * Media library
+  * Responsive image
