@@ -10,15 +10,14 @@ Before proceeding, install Docker and DDev.
 ## 1. Setup your environment
 After installing Docker and DDev, setup your project by following these steps.
 
-In your command line, navigate to the directory where you would like to setup your project. This can be any directory such as `Sites`, `My Documents`, etc.
+* Using the command line, navigate to the directory where you would like to setup your project. This can be any directory such as `Sites`, `My Documents`, etc.
 
 * Clone the repo by running:
 ```
 git clone git@github.com:mariohernandez/drupal_training_ddev.git
 ```
 
-* Using your command line, change into the newly created directory by the repo command above (`drupal_training_ddev`).  If you changed this directory name, use the name you specified.
-
+* Change into the newly created directory by the repo command above (`drupal_training_ddev`).  If you changed this directory name, use the name you specified.
 ```
 cd drupal_trianing_ddev
 ```
@@ -27,11 +26,10 @@ cd drupal_trianing_ddev
 ```
 ddev start
 ```
-This will install Drupal and import a preconfigured database which includes
-all the cofiguration needed for the training.  It will also enable the required modules.
+This will install Drupal and import the database which includes all the cofiguration needed for the training.  It will also enable the required modules.
 
 ## 2. Working with the training_theme theme
-DDev already proides all the tools needed compiling JSON, Twig, Sass, and JavaScript code.  This means you don't need install any of the Front-end tools needed by Pattern Lab.
+DDev already provides all the tools needed for compiling JSON, Twig, Sass, and JavaScript code.  This means you don't need install any of the Front-end tools needed by the theme.
 
 * In your command line, type:
 ```
@@ -47,13 +45,21 @@ cd themes/custom/training_theme
 ```
 nvm use
 ```
+_This sets your project to use the Node version specified in `.nvmrc`_.
 ```
 npm install
 ```
+_This will install all the node dependencies specified in `package.json`.  This process could take a few minutes.  Do not interrup it_.
 ```
 npm run build
 ```
 _The first two commands above only need to be ran one time.  The `npm run build` will be used to compile all your theme's code_.
+
+Another commands we will use while working in our theme will be:
+```
+npm run watch
+```
+_This will watch for any changes your make to Sass, Twig, JSON or JavaScript and it will automatically compile them_.
 
 ## 3. Login to your Drupal site
 * In your browser open http://d8.ddev.site
