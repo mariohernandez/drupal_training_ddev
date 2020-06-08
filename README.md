@@ -31,33 +31,26 @@ This will install Drupal and import the database which includes all the cofigura
 ## 2. Working with the training_theme theme
 DDev already provides all the tools needed for compiling JSON, Twig, Sass, and JavaScript code.  This means you don't need install any of the Front-end tools needed by the theme.
 
-* In your command line, type:
-```
-ddev ssh
-```
-
-* Change to the `training_theme` directory:
+* While in `drupal_trianing_ddev`, change directory to the `training_theme`:
 ```
 cd themes/custom/training_theme
 ```
 
 * Install all theme dependencies:
 ```
-nvm use
+ddev nvm-use && ddev npm-install
 ```
 _This sets your project to use the Node version specified in `.nvmrc`_.
+
+
 ```
-npm install
-```
-_This will install all the node dependencies specified in `package.json`.  This process could take a few minutes.  Do not interrup it_.
-```
-npm run build
+ddev build
 ```
 _The first two commands above only need to be ran one time.  The `npm run build` will be used to compile all your theme's code_.
 
 Another commands we will use while working in our theme will be:
 ```
-npm run watch
+ddev watch
 ```
 _This will watch for any changes your make to Sass, Twig, JSON or JavaScript and it will automatically compile them_.
 
