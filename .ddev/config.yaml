@@ -14,7 +14,6 @@ provider: default
 use_dns_when_possible: true
 timezone: ""
 
-
 # This config.yaml was created with ddev version v1.12.2
 # webimage: drud/ddev-webserver:v1.12.2
 # dbimage: drud/ddev-dbserver-mariadb-10.2:v1.12.0
@@ -154,8 +153,21 @@ timezone: ""
 # See https://ddev.readthedocs.io/en/stable/users/extending-commands/ for more
 # information on the commands that can be extended and the tasks you can define
 # for them. Example:
-# hooks:
-# post-import-db:
-#   - exec: drush cr
-#   - exec: drush updbhooks:
-#   - exec: drush updb
+hooks:
+  post-start:
+    # Install Drupal after start if not installed already
+    - exec: "(drush status bootstrap | grep -q Successful) || drush site-install -y --db-url=mysql://db:db@db/db && drush sql-cli < ./db/d8_training.sql && drush updb"
+    # Import provided database.
+    # - exec: /var/www/html/db/import-db.sh
+    # - exec: "drush sql-cli < ./db/d8_training.sql"
+    # Updata database.
+    # - exec: "drush updb"
+    # Generate a one-time login link for the admin account.
+    - exec: "drush uli"
+
+## For more ways to perform post start tasks see:
+#https://ddev.readthedocs.io/en/stable/users/extending-commands/
+#https://davidjguru.github.io/blog/creating-development-environments-for-drupal-with-ddev
+#https://gitlab.com/davidjguru/50-ways-to-install-drupal
+#https://ddev.readthedocs.io/en/stable/users/cli-usage/#drupal-8-quickstart
+# https://github.com/drud/ddev-contrib/tree/master/hook-examples/import-db-if-empty
