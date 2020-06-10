@@ -155,11 +155,10 @@ timezone: ""
 # for them. Example:
 hooks:
   post-start:
-    # Install Drupal after start if not installed already
-    - exec: "(drush status bootstrap | grep -q Successful) || drush site-install -y --db-url=mysql://db:db@db/db && drush sql-cli < ./db/d8_training.sql && drush updb"
+    # Install Drupal after start if not installed already.
+    - exec: "(drush status bootstrap | grep -q Successful) || drush site-install -y --db-url=mysql://db:db@db/db"
     # Import provided database.
-    # - exec: /var/www/html/db/import-db.sh
-    # - exec: "drush sql-cli < ./db/d8_training.sql"
+    - exec: /var/www/html/db/import-db.sh
     # Updata database.
     # - exec: "drush updb"
     # Generate a one-time login link for the admin account.

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+## Description: Install the theme's dependencies.
+## Example: "nvm [flags] [args]"
+
+cd /var/www/html/themes/custom/training_theme && nvm $@

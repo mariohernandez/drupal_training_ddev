@@ -1,6 +1,0 @@
-#!/bin/bash
-
-## Description: Compile the theme.
-## Example: "ddev build"
-
-cd /var/www/html/themes/custom/training_theme && npm run build

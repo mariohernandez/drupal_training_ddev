@@ -1,6 +1,0 @@
-#!/bin/bash
-
-## Description: Install the theme's dependencies.
-## Example: "ddev npm-install"
-
-cd /var/www/html/themes/custom/training_theme && npm rebuild node-sass && npm install
