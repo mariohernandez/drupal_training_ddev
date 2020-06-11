@@ -5,14 +5,6 @@
  * #ddev-generated: Automatically generated Drupal settings file.
  * ddev manages this file and may delete or overwrite the file unless this
  * comment is removed.
- *
- * $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml';
- * $config['system.performance']['css']['preprocess'] = FALSE;
- * $config['system.performance']['js']['preprocess'] = FALSE;
- * $settings['cache']['bins']['render'] = 'cache.backend.null';
- * $settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
- * $settings['cache']['bins']['page'] = 'cache.backend.null';
- *
  */
 
 $host = "db";
@@ -22,8 +14,8 @@ $port = 3306;
 // so use the host-side bind port on docker IP
 if (empty(getenv('DDEV_PHP_VERSION') && getenv('IS_DDEV_PROJECT') == 'true')) {
   $host = "127.0.0.1";
-  $port = 32778;
-}
+  $port = 32775;
+} 
 
 $databases['default']['default'] = array(
   'database' => "db",
@@ -35,7 +27,7 @@ $databases['default']['default'] = array(
   'prefix' => "",
 );
 
-$settings['hash_salt'] = 'yxPdSmtNzkLyVTvfPXXcoORLNNmSOAvCpUgaEsRsEYhcHikXWqRrSwcaIJGBMArz';
+$settings['hash_salt'] = 'ZzeCfujosgMAhDlHJxPNzyNDSxQuZeAxubbkAmnZkJKDfkTaNcOIbMbqJMoRPiVe';
 
 // This will prevent Drupal from setting read-only permissions on sites/default.
 $settings['skip_permissions_hardening'] = TRUE;
