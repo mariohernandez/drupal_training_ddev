@@ -1,6 +1,7 @@
 #!/bin/bash
 
-## Description: Install the theme's dependencies.
-## Example: "nvm [flags] [args]"
+## Description: Install or use node.
+## Usage: nvm [flags] [args]
+## Example: "nvm use or nvm install"
 
 cd /var/www/html/themes/custom/training_theme && nvm $@

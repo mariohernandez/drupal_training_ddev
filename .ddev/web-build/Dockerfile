@@ -1,7 +1,6 @@
 # Install and configure nvm
-ARG BASE_IMAGE=drud/ddev-webserver:v1.12.2
+ARG BASE_IMAGE
 FROM $BASE_IMAGE
-RUN npm install --global gulp-cli
 
 ENV NVM_DIR=/usr/local/nvm
 ENV NODE_DEFAULT_VERSION=v14.2.0
