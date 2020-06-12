@@ -8,6 +8,7 @@
 
 # Ignore sensitive information
 /sites/*/settings.php
+/sites/*/settings.ddev.php
 /sites/*/settings.local.php
 
 # Ignore Drupal's file directory
