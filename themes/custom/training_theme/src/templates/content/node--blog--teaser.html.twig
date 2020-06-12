@@ -89,6 +89,8 @@ modifier, title, and url).
   }
 %}
 
+{# {% set tags = content.field_blog_tags|slice(0, 1) %} #}
+
 {#
 Uses embed to be able to include card component
 and make use of twig blocks found in such component.
@@ -103,7 +105,7 @@ and make use of twig blocks found in such component.
     "date": date,
     "body_text": content.body|render|trim is not empty ? content.body,
     "tags": content.field_blog_tags|render|trim is not empty ? content.field_blog_tags,
-    "modifier": ""
+    "modifier": "tag__single"
   } only
 %}
 

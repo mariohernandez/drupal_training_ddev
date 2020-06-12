@@ -1,15 +1,29 @@
 {{ attach_library('training_theme/tags') }}
 
-<ul class="tags{{- attributes ? ' ' ~ attributes.class -}}"
+<ul class="tags{{ tags.modifier ? ' ' ~ tags.modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
   {{- attributes ? attributes|without(class) -}}>
-  {% for item in items %}
-    {% block tag_item %}
-      {%
-        include '@training_theme/tags/_tag-item.twig' with {
-          "name": item.name,
-          "url": item.url
-        } only
-      %}
-    {% endblock %}
-  {% endfor %}
+
+{% block tag_item %}
+  {% if 'tag__single' in tags.modifier %}
+      {% for item in tags.items|slice(0, 1) %}
+        {%
+          include '@training_theme/tags/_tag-item.twig' with {
+            "name": item.name,
+            "url": item.url,
+            "modifier": item.modifier
+          } only
+        %}
+        {% endfor %}
+    {% else %}
+      {% for item in tags.items %}
+        {%
+          include '@training_theme/tags/_tag-item.twig' with {
+            "name": item.name,
+            "url": item.url,
+            "modifier": item.modifier
+          } only
+        %}
+      {% endfor %}
+    {% endif %}
+  {% endblock %}
 </ul>

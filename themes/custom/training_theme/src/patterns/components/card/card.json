@@ -8,19 +8,22 @@
   },
   "date": "March 16 2020",
   "body_text": "Curabitur blandit tempus porttitor. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
-  "tags": [
-    {
-      "name": "Photography",
-      "url": "#"
-    },
-    {
-      "name": "Sports",
-      "url": "#"
-    },
-    {
-      "name": "Outdors",
-      "url": "#"
-    }
-  ],
+  "tags": {
+    "modifier": "",
+    "items": [
+      {
+        "name": "Photography",
+        "url": "#"
+      },
+      {
+        "name": "Sports",
+        "url": "#"
+      },
+      {
+        "name": "Outdors",
+        "url": "#"
+      }
+    ]
+  },
   "modifier": ""
 }

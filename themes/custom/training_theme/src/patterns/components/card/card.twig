@@ -52,13 +52,11 @@
     {% endif %}
 
     {% block tags %}
-      {% if tags %}
-        {%
-          include '@training_theme/tags/tags.twig' with {
-            "items": tags
-          } only
-        %}
-      {% endif %}
+      {%
+        include '@training_theme/tags/tags.twig' with {
+          "tags": tags
+        } only
+      %}
     {% endblock tags %}
 
     {% block author %}

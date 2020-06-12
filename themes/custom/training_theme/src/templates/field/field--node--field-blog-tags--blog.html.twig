@@ -35,6 +35,8 @@
 #}
 {% embed '@training_theme/tags/tags.twig' %}
   {% block tag_item %}
-    {{ item.content }}
+    {% for item in items|slice(0, 1) %}
+      {{ item.content }}
+    {% endfor %}
   {% endblock %}
 {% endembed %}

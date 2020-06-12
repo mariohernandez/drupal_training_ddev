@@ -1,18 +1,18 @@
 {
   "tags": {
-    "modifier": "",
+    "modifier": "tag__single",
     "items": [
       {
         "name": "Photography",
         "url": "#"
       },
       {
-        "name": "Sports",
-        "url": "#"
+        "name": "",
+        "url": ""
       },
       {
-        "name": "Outdors",
-        "url": "#"
+        "name": "",
+        "url": ""
       }
     ]
   }
