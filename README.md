@@ -10,9 +10,9 @@ Before proceeding, install Docker and DDev.
 ## 1. Setup your environment
 After installing Docker and DDev, setup your project by following these steps.
 
-* Using the command line, navigate to the directory where you would like to setup your project. This can be any directory such as `Sites`, `My Documents`, etc.
+* Using the command line tool of your choice, navigate to the directory where you would like to setup your project. This can be any directory in your computer, such as `Sites`, `My Documents`, etc.
 
-* Clone the repo by running:
+* First clone the repo:
 ```
 git clone git@github.com:mariohernandez/drupal_training_ddev.git
 ```
@@ -26,39 +26,38 @@ cd drupal_trianing_ddev
 ```
 ddev start
 ```
-This will install Drupal and import the database which includes all the cofiguration needed for the training.  It will also enable the required modules.
+This will install Drupal and import the database which includes all the cofiguration needed for the training.  It will also enable the required modules.  This process could take a couple of minutes.
 
-## 2. Working with the training_theme theme
-DDev already provides all the tools needed for compiling JSON, Twig, Sass, and JavaScript code.  This means you don't need install any of the Front-end tools needed by the theme.
+## 2. Working with the Drupal 8 theme
+The theme name for this project is `training_theme`.  All documentation and exercises makes reference of this theme name.  DDev already provides all the tools needed for compiling JSON, Twig, Sass, and JavaScript code.  This means you don't need install any of the Front-end tools in your local machine.
+
+### 2.1 Installing the theme dependencies
+The Drupal 8 theme is a Node-based theme which uses Pattern Lab, Gulp, Node Sass, and other node dependencies.
 
 * While in `drupal_trianing_ddev`, change directory to the `training_theme`:
 ```
 cd themes/custom/training_theme
 ```
 
-* Install all theme dependencies:
+* Install the theme dependencies:
 ```
-ddev nvm-use && ddev npm-install
+ddev nvm use && ddev npm install
 ```
-_This sets your project to use the Node version specified in `.nvmrc`_.
+_The first command sets your project to use the Node version specified in `.nvmrc`, and the second commands installs al of node dependencies found in `package.json`.  You will only need to run these commands one time for the most part_.
 
 
+### 2.2 Compiling your code
 ```
-ddev build
+ddev npm run watch
 ```
-_The first two commands above only need to be ran one time.  The `npm run build` will be used to compile all your theme's code_.
+_This command will build/compile your entire theme codebase and will stay running in the background watching for new changes.  Everytime you save new changes in your theme's code, it will compile them automatically and it should auto-reload Pattern Lab in your browser._.
 
-Another commands we will use while working in our theme will be:
-```
-ddev watch
-```
-_This will watch for any changes your make to Sass, Twig, JSON or JavaScript and it will automatically compile them_.
 
 ## 3. Login to your Drupal site
-* In your browser open http://d8.ddev.site
+* In your browser open http://d8.ddev.site/user
 * Username: `admin`, password: `admin`
 
-If you wish to generate a one-time login token type the following in yor command line:
+If you wish to generate a one-time login token to automatically login as admin, run the following command:
 ```
 ddev . drush uli
 ```
