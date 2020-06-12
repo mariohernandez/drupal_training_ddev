@@ -29,55 +29,15 @@ global:
 #     - training_theme/clearfix
 #     - training_theme/visually-hidden
 
-author:
-  css:
-    component:
-      dist/css/author.css: {}
-
 button:
   css:
     component:
       dist/css/button.css: {}
 
-card:
-  css:
-    component:
-      dist/css/card.css: {}
-  dependencies:
-    - training_theme/author
-    - training_theme/tags
-    - training_theme/eyebrow
-
 eyebrow:
   css:
     component:
       dist/css/eyebrow.css: {}
-
-featured-content:
-  css:
-    component:
-      dist/css/featured-content.css: {}
-
-from-our-blog:
-  css:
-    component:
-      dist/css/from-our-blog.css: {}
-
-heading:
-  css:
-    component:
-      dist/css/heading.css: {}
-
-
-hero:
-  css:
-    component:
-      dist/css/hero.css: {}
-
-main-menu:
-  css:
-    component:
-      dist/css/main-menu.css: {}
 
 message:
   css:
@@ -88,11 +48,6 @@ tabs:
   css:
     component:
       dist/css/tabs.css: {}
-
-tags:
-  css:
-    component:
-      dist/css/tags.css: {}
 
 media-item:
   css:
