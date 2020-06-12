@@ -1,4 +1,4 @@
-# Drupal 8 training
+# Drupal 8 Component-based Training
 This is a hands-on training workshop by [Mediacurrent](https://mediacurrent.com).
 
 ## Requirements
@@ -29,7 +29,7 @@ ddev start
 This will install Drupal and import the database which includes all the cofiguration needed for the training.  It will also enable the required modules.  This process could take a couple of minutes.
 
 ## 2. Working with the Drupal 8 theme
-The theme name for this project is `training_theme`.  All documentation and exercises makes reference of this theme name.  DDev already provides all the tools needed for compiling JSON, Twig, Sass, and JavaScript code.  This means you don't need install any of the Front-end tools in your local machine.
+The theme name for this project is `training_theme`.  All documentation and exercises make reference of this theme name.  DDev already provides all the tools needed for compiling JSON, Twig, Sass, and JavaScript code.  This means you don't need install any of the Front-end tools in your local machine.
 
 ### 2.1 Installing the theme dependencies
 The Drupal 8 theme is a Node-based theme which uses Pattern Lab, Gulp, Node Sass, and other node dependencies.
@@ -43,7 +43,7 @@ cd themes/custom/training_theme
 ```
 ddev nvm use && ddev npm install
 ```
-_The first command sets your project to use the Node version specified in `.nvmrc`, and the second commands installs al of node dependencies found in `package.json`.  You will only need to run these commands one time for the most part_.
+_The first command sets your project to use the Node version specified in `.nvmrc`, and the second command installs al of node dependencies found in `package.json`.  You will only need to run these commands one time for the most part_.
 
 
 ### 2.2 Compiling your code
