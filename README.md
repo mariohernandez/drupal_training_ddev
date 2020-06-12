@@ -19,7 +19,7 @@ git clone git@github.com:mariohernandez/drupal_training_ddev.git
 
 * Change into the newly created directory by the repo command above (`drupal_training_ddev`).  If you changed this directory name, use the name you specified.
 ```
-cd drupal_trianing_ddev
+cd drupal_training_ddev
 ```
 
 * Then run:
