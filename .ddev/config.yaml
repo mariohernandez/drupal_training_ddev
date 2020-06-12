@@ -161,6 +161,8 @@ hooks:
     - exec: /var/www/html/db/import-db.sh
     # Updata database.
     - exec: "drush updb"
+    # Clear Drupal's cache
+    - exec: "drush cr"
     # Generate a one-time login link for the admin account.
     - exec: "drush uli"
 
