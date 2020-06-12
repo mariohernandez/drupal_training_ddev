@@ -43,10 +43,15 @@ _The first command sets your project to use the Node version specified in `.nvmr
 
 ### 2.2 Compiling your code
 ```
+ddev npm run build
+```
+_This command will compile your entire theme codebase_.
+
+### 2.3 Watching for changes (optional)
+```
 ddev npm run watch
 ```
-_This command will build/compile your entire theme codebase and will stay running in the background watching for new changes.  Everytime you save new changes in your theme's code, it will compile them automatically and it should auto-reload Pattern Lab in your browser._.
-
+_This command will compile your entire theme codebase and will stay running in the background watching for new changes.  Everytime you save new changes in your theme's code, it will compile them automatically_.
 
 ## 3. Login to your Drupal site
 * In your browser open http://d8.ddev.site/user
