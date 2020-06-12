@@ -160,7 +160,7 @@ hooks:
     # Import provided database.
     - exec: /var/www/html/db/import-db.sh
     # Updata database.
-    # - exec: "drush updb"
+    - exec: "drush updb"
     # Generate a one-time login link for the admin account.
     - exec: "drush uli"
 

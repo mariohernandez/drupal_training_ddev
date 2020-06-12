@@ -8,7 +8,7 @@ Before proceeding, install Docker and DDev.
 * **DDev**: Install DDev on [macOS](https://ddev.readthedocs.io/en/stable/#homebrewlinuxbrew-macoslinux) or [Windows 10](https://ddev.readthedocs.io/en/stable/#installation-or-upgrade-windows)
 
 ## 1. Setup your environment
-After installing Docker and DDev, setup your project by following these steps.
+After installing Docker and DDev, be sure Docker is up and running and follow the steps below.
 
 * Using the command line tool of your choice, navigate to the directory where you would like to setup your project. This can be any directory in your computer, such as `Sites`, `My Documents`, etc.
 
@@ -34,16 +34,11 @@ The theme name for this project is `training_theme`.  All documentation and exer
 ### 2.1 Installing the theme dependencies
 The Drupal 8 theme is a Node-based theme which uses Pattern Lab, Gulp, Node Sass, and other node dependencies.
 
-* While in `drupal_trianing_ddev`, change directory to the `training_theme`:
-```
-cd themes/custom/training_theme
-```
-
 * Install the theme dependencies:
 ```
 ddev nvm use && ddev npm install
 ```
-_The first command sets your project to use the Node version specified in `.nvmrc`, and the second command installs al of node dependencies found in `package.json`.  You will only need to run these commands one time for the most part_.
+_The first command sets your project to use the Node version specified in `.nvmrc`, and the second command installs al of node dependencies found in `package.json`.  You will only need to run these commands one time for the most part.  This could take a couple of minutes_.
 
 
 ### 2.2 Compiling your code
