@@ -155,6 +155,8 @@ timezone: ""
 # for them. Example:
 hooks:
   post-start:
+    # Install all PHP dependencies.
+    - composer: install
     # Install Drupal after start if not installed already.
     - exec: "(drush status bootstrap | grep -q Successful) || drush site-install -y --db-url=mysql://db:db@db/db"
     # Import provided database.

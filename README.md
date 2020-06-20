@@ -2,13 +2,14 @@
 This is a hands-on training workshop by [Mediacurrent](https://mediacurrent.com).
 
 ## Requirements
-Before proceeding, install Docker and DDev.
+Before proceeding, install Docker, DDev, and Composer.
 
 * **Docker**:  Install Docker on [macOS](https://ddev.readthedocs.io/en/stable/users/docker_installation/) or [Windows 10](https://ddev.readthedocs.io/en/stable/users/docker_installation/#windows-installation-docker-desktop-for-windows)
 * **DDev**: Install DDev on [macOS](https://ddev.readthedocs.io/en/stable/#homebrewlinuxbrew-macoslinux) or [Windows 10](https://ddev.readthedocs.io/en/stable/#installation-or-upgrade-windows)
+* **Composer**: Install Composer on [macOS](https://www.chriscollins.me/blog/install-composer-globally-on-mac-os/) or [Windows 10](https://getcomposer.org/doc/00-intro.md#installation-windows)
 
 ## 1. Setup your environment
-After installing Docker and DDev, be sure Docker is up and running and follow the steps below.
+After installing Docker, DDev, and Composer, be sure Docker is up and running and follow the steps below.
 
 * Using the command line tool of your choice, navigate to the directory where you would like to setup your project. This can be any directory in your computer, such as `Sites`, `My Documents`, etc.
 
@@ -21,6 +22,11 @@ git clone git@github.com:mariohernandez/drupal_training_ddev.git
 ```
 cd drupal_training_ddev
 ```
+
+```
+composer install
+```
+_This will install all the PHP depencencies for this project_.
 
 * Then run:
 ```
